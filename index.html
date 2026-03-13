@@ -116,9 +116,22 @@
       <a href="https://www.instagram.com/?hl=es" target="_blank" id="btn_6" class="OBJ-9 ActiveButton OBJ-10" style="position:absolute;left:464px;top:1877px;width:499px;height:230px;"></a>
       <a href="https://unidadpsiquiatricavenezuela.setmore.com/" target="_blank" id="btn_7" class="OBJ-11 ActiveButton OBJ-12" style="position:absolute;left:0px;top:2203px;width:954px;height:148px;"></a>
       <a href="comoagregartarjetapantalladeinicio.html" id="btn_8" class="OBJ-13 ActiveButton OBJ-14" style="position:absolute;left:149px;top:2415px;width:683px;height:85px;"></a>
-      <a href="share.html">
+      
         <img alt="share.html" src="wpimages/wped149e1b_06.png" style="position:absolute;left:701px;top:1017px;width:170px;height:164px;">
       </a>
+		<script>
+  document.getElementById('wpimages/wped149e1b_06.png').addEventListener('click', async () => {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: '¡Mira esta página!',
+        url: window.location.href
+      });
+    } catch (err) {
+      console.log('Error al compartir', err);
+    }
+  });
+</script>
       <a href="https://wa.link/10ctak" target="_blank">
         <img alt="" src="wpimages/wp4bc95a93_06.png" style="position:absolute;left:556px;top:877px;width:93px;height:99px;">
       </a>
@@ -132,4 +145,5 @@
 	<script src="./script.js"></script>
   </body>
 </html>
+
 
