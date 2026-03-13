@@ -1,5 +1,24 @@
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(reg => console.log('Registro de SW exitoso', reg))
-    .catch(err => console.warn('Error al tratar de registrar el sw', err))
-}
+let deferredPrompt;
+const btnInstalar = document.getElementById('btnInstalar');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Previene que aparezca la barra de información automática en navegadores móviles
+  e.preventDefault();
+  deferredPrompt = e;
+  // Muestra el botón
+  btnInstalar.style.display = 'block';
+});
+
+btnInstalar.addEventListener('click', (e) => {
+  // Oculta el botón
+  btnInstalar.style.display = 'none';
+  // Muestra el prompt de instalación nativo
+  deferredPrompt.prompt();
+  // Espera la respuesta del usuario
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('Usuario aceptó instalar');
+    }
+    deferredPrompt = null;
+  });
+});
