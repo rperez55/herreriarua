@@ -145,58 +145,5 @@
 	<script src="./script.js"></script>
   </body>
 </html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta name="viewport" content="width=980">
-<style>
-  /* Contenedor del banner */
-  .banner-container {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;top:0;left:0
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Animación del texto */
-  .banner-text {
-    white-space: nowrap;
-    animation: marquee 15s linear infinite;
-    font-family: sans-serif;
-    font-size: 40px;
-  }
-
-  @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  /* Botón de cerrar */
-  .close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    margin-left: 10px;
-    z-index: 10;
-  }
-
-  /* Ocultar banner */
-  .hidden { display: none; }
-</style>
-</head>
-<body>
-
-<div id="myBanner" class="banner-container">
-  <div class="banner-text">¡Oferta especial! 50% de descuento en todos los productos ??</div>
-  <button class="close-btn" onclick="document.getElementById('myBanner').classList.add('hidden')">❌​</button>
-</div>
-
-</body>
-</html>
 
 
