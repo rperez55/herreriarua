@@ -105,9 +105,45 @@
       });
     </script>
   </head>
-	<div class="banner-desplazable">
-  <p>¡Oferta especial! Usa el código 2026 - Envío gratis en tu primera compra.</p>
+	<!-- Estructura HTML -->
+<div id="banner-movil" class="banner-footer">
+    <p>¡Oferta especial! <a href="#">Ver más</a></p>
+    <button onclick="ocultarBanner()" class="boton-cerrar">&times;</button>
 </div>
+
+<style>
+/* Estilos CSS */
+.banner-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-cerrar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+// Función JavaScript para ocultar
+function ocultarBanner() {
+    document.getElementById('banner-movil').style.display = 'none';
+}
+</script>
 
   <body style="height:2500px;background:#ffffff;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:980px;height:2500px;">
